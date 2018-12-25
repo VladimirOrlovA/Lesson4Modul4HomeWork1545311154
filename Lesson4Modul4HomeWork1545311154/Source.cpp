@@ -204,24 +204,26 @@ void Task7()
 	printf("\n--------------------------------------------------------------------------\n\nTask7\n\n");
 	SetConsoleTextAttribute(hConsole, 7);
 
-	int dec = 65;  //259
-	int oct=0, ost=0, i=0;
+	int dec = 1+rand()%999;
+	int div, ost, oct = 0, i = 0;
 
-	printf("\n Случайное число => ");
-	scanf_s("%d", &dec);
+	printf("\n Случайное 10-е число	=> %d dec", dec);
+	
 
 	do
 	{
-		dec = dec / 8;
-		ost = pow(10, i)+ost;
+		div = dec / 8;
+		ost = pow(10, i)*(dec - div*8);
+		oct = oct + ost;
+		dec = div;
 		i++;
 			
 
 	} while (dec >= 8);
 
-	oct = pow(10, i) + dec + ost;
+	oct = oct + pow(10, i)*dec;
 
-	printf("\n %d", oct);
+	printf("\n Перевод в 8-е число	=> %d oct \n\n", oct);
 		
 	
 }
