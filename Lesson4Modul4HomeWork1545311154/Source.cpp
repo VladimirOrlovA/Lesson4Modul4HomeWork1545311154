@@ -205,42 +205,25 @@ void Task7()
 	SetConsoleTextAttribute(hConsole, 7);
 
 	int dec = 65;  //259
-	int n0=0, n1=0, n2=0, n3=0, ost;
+	int oct=0, ost=0, i=0;
 
 	printf("\n Случайное число => ");
 	scanf_s("%d", &dec);
 
 	do
 	{
-		n1 = dec / 8;
-		ost = dec - n1*8;
-
-		if (n1 >= 8)
-		{
-			ost = n2 * 8 - n1;
-			n2 = n1 / 8;
-					
-			printf("\n %d dec => %d%d%d oct", dec, n1/8, ost, n2);
-		}
-		else
-		{
-			printf("\n %d dec => %d%d oct", dec, n1, ost);
-		}
+		dec = dec / 8;
+		ost = pow(10, i)+ost;
+		i++;
 			
 
-	} while (n2 >= 8);
+	} while (dec >= 8);
 
-	//printf("\n %d %d %d", n0, n1, n2);
+	oct = pow(10, i) + dec + ost;
+
+	printf("\n %d", oct);
 		
-	// printf("\n Число %d Dec = %d%d Oct", dec, n);
 	
-	
-	
-	
-
-
-
-
 }
 
 
