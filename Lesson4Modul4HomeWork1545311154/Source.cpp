@@ -15,6 +15,22 @@ void Task1()
 	printf("\nВ разработке.... \n\n");
 	SetConsoleTextAttribute(hConsole, 7);
 
+	int n, i;
+	int a[5] = { 0 };
+
+	for(i=0; i<5;i++)
+	{
+		printf("Введите число a[%d] => ", i);
+		scanf_s("%d", &a[i]);
+		
+	}
+
+	for (i = 0; i < 5; i++);
+	{
+		if (a[i] > -5 || a[i] < 5) printf("%d => %d", i, a[i]);
+	}
+
+	printf("%d", a[5]);
 
 }
 
